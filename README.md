@@ -22,18 +22,6 @@ This project aims to build a hands-on system that shows how infrastructure metri
 ***Docker & Docker Compose*** - Environment containerization<br>
 ***Apache Spark & HDFS*** - Real-time log aggregation and scalable storage<br>
 
-## **Architecture**
-     +--------------------+      +---------+       +------------------+       +----------------+
-     |  Java Server App  |-----> | Kafka   |-----> | Python Consumer  |-----> | PostgreSQL DB  |
-     |  (Metrics Prod.)  |       | Broker  |       | (Metrics Cons.)  |       | (Metrics Data) |
-     +--------------------+      +---------+       +------------------+       +----------------+
-              ||
-              ||
-              \/
-     +--------------------+        +----------+       +--------------------+
-     | Java Load Balancer |----->  |  Spark   |-----> |   HDFS Storage     |
-     |   (Logs Producer)  |        |  Stream  |       |   (logs Data       |
-     +--------------------+        +----------+       +--------------------+
 
  
 
